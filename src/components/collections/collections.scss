@@ -1,0 +1,78 @@
+.collections-grid {
+  @apply w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 px-20 pt-8 gap-8;
+
+  & .collection,
+  & .collection-add-btn {
+      @apply border-2 border-gray-400 h-44 rounded-md cursor-pointer flex flex-col p-4 relative;
+
+    & .title {
+      @apply text-2xl font-bold font-nunito mb-1 truncate;
+    }
+
+    & .description {
+      @apply text-xs text-gray-700 font-comfortaa overflow-hidden mb-2;
+
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+
+    & .images {
+      @apply flex bottom-4 left-4 gap-4 h-10 absolute;
+
+      & img {
+        @apply h-full w-10 rounded-full;
+      }
+
+      & .images-count {
+        @apply border w-10 flex justify-center items-center bg-gray-300 border-gray-700 rounded-full;
+      }
+    }
+
+    & .delete-btn {
+      @apply absolute bottom-6 right-4 cursor-pointer;
+    }
+  }
+
+  & .collection-add-btn {
+    @apply flex justify-center items-center;
+
+    & .plus-btn {
+      @apply text-4xl font-semibold h-24 w-24 rounded-full flex justify-center items-center;
+
+      background-color: #f1f3f4;
+      color: #5f6268;
+    }
+  }
+}
+
+.create-collection-popup {
+  @apply p-9 fixed top-2/4 left-2/4 bg-white rounded-md flex flex-col items-center;
+
+  transform: translate(-50%, -50%);
+  width: 50vw;
+
+  & .header {
+    @apply text-4xl font-bold font-nunito mb-12;
+  }
+
+  & .input-control {
+    @apply w-full h-12 rounded-lg border-2 font-medium text-xl mb-7 px-5;
+    border: solid #e5ebf5 2px;
+
+    &:focus-visible {
+      @apply outline-none;
+    }
+
+    &.height-fit {
+      height: fit-content;
+    }
+  }
+
+  & .submit-btn {
+    @apply h-12 rounded-lg border-2 font-medium text-xl px-5 text-white self-start;
+    background-color: #2d38f0;
+  }
+
+
+}
